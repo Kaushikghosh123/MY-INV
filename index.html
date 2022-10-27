@@ -136,14 +136,14 @@
 
 <body>
     <iframe src="sanai.mp3" allow="autoplay" id="audio" hidden style="display: none;" ></iframe>
-    <audio id="player"  style="display: none;" autoplay controls loop>
+    <audio id="player"  id="audio1" style="display: none;" autoplay controls loop>
         <source src="sanai.mp3" type="audio/mp3">
     </audio>
     <div class="main">
         <div class="title">
             <h1>বধূবরণ</h1>
             <div class="design">
-                <img src="https://img.freepik.com/free-vector/watercolor-flowers-circular-frame_23-2149161781.jpg?w=2000"
+                <img src="https://freepikpsd.com/file/2019/10/white-floral-design-png-7-Transparent-Images-Free.png"
                     alt="">
             </div>
         </div>
@@ -159,6 +159,11 @@
             $(".card").click(function () {
                 $(".card").toggleClass('card2');
             });
+            document.addEventListener('click', musicPlay);
+            function musicPlay() {
+              document.getElementById('audio1').play();
+              document.removeEventListener('click', musicPlay);
+            }
         </script>
 </body>
 
